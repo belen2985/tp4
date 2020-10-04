@@ -14,3 +14,10 @@ for i in range(10):
     num = int(input("Ingrese un número: "))
     lista.append(num)
     suma += num
+for i in lista:
+    print(i)
+
+media = suma / len(lista)
+
+print("La suma es ",suma)
+print("El promedio es ",promedio)
