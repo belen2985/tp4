@@ -5,33 +5,42 @@ Consigna:Crea una lista vacÃƒÂ­a (pongamos 10 posiciones), pide sus valores
 y devuelve la suma, el promedio y la desviacion estandar de los nÃƒÂºmeros.
 Imprime la lista de numeros.
 """
-import math
+a= int(input("ingrese 1 para comenzar el programa: "))
+if a==1:
+    while a==1:
 
-def desviacion_estandar(valores,media):
-    suma = 0
-    for valor in valores:
-        suma += (valor - media) ** 2
+        import math
 
-    radicando = suma / (len(valores))
+        def desviacion_estandar(valores,media):
+            suma = 0
+            for valor in valores:
+             suma += (valor - media) ** 2
 
-    return math.sqrt(radicando)
+            radicando = suma / (len(valores))
 
-lista=[]
-suma=0
-prom=0
-num=0
-for i in range(10):
-    num = int(input("Ingrese un numero: "))
-    lista.append(num)
-    suma += num
-for i in lista:
-    print(i)
+            return math.sqrt(radicando)
 
-prom = suma / len(lista)
+        lista=[]
+        suma=0
+        prom=0
+        num=0
+        for i in range(10):
+            num = int(input("Ingrese un numero: "))
+            lista.append(num)
+            suma += num
+        for i in lista:
+            print(i)
 
-dev_std = desviacion_estandar(lista, prom)
+        prom = suma / len(lista)
 
-print("La suma es: ",suma)
-print("El promedio es: ",prom)
-print("La desviación estándar es: ",dev_std)
+        dev_std = desviacion_estandar(lista, prom)
 
+        print("La suma total es de: ",suma)
+        print("El promedio es: ",prom)
+        print("La desviación estándar es: ",dev_std)
+        a=0
+        a= int(input("ingrese 1 para realizar otra vez el ejercicio o 0 para finalizar: "))
+    else:
+        print("gracias por usar el programa")
+else:
+    print("error al iniciar, no presiono el numero solicitado")
